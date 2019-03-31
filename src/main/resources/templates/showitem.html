@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>A Task</title>
+</head>
+<body>
+<a href="/">Your Task List</a><br />
+To Do :<span th:text="${item.task}" ></span><br />
+Due Date :<span th:text="${item.due}" ></span><br />
+High Priority :<span th:text="${item.priority}"></span><br />
+<a th:href="@{/delete/{id}(id=${item.id})}">Delete this item</a>
+</body>
+</html>
